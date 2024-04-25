@@ -1,0 +1,51 @@
+Flutter é um framework de código aberto desenvolvido pelo Google para criar aplicativos nativos para dispositivos móveis, web e desktop a partir de uma única base de código. 
+Ele usa a linguagem de programação Dart e é conhecido por oferecer uma experiência de desenvolvimento rápida e eficiente, além de proporcionar uma aparência e desempenho nativos.
+
+Widget:
+
+Flutter utiliza widgets como blocos de construção para criar interfaces de usuário.
+Exemplo: Container, Text, ListView, AppBar são todos widgets em Flutter.
+
+Hot Reload:
+
+Recurso que permite aos desenvolvedores ver instantaneamente as mudanças feitas no código refletidas no aplicativo em execução, sem a necessidade de reiniciar o aplicativo.
+Facilita o desenvolvimento rápido e aprimoramento da experiência do desenvolvedor.
+
+Material Design e Cupertino:
+
+Flutter oferece suporte tanto ao Material Design (Android) quanto ao estilo Cupertino (iOS), permitindo que os aplicativos tenham uma aparência nativa em ambas as plataformas.
+Exemplo: MaterialApp, Scaffold para Material Design; CupertinoApp, CupertinoNavigationBar para estilo Cupertino.
+
+Plugins e Pacotes:
+
+Com uma comunidade ativa, Flutter tem uma ampla variedade de pacotes e plugins disponíveis para integrar funcionalidades adicionais aos aplicativos.
+Exemplo: http para realizar solicitações HTTP, firebase para integração com serviços do Firebase.
+
+Stateful e Stateless Widgets:
+
+Widgets no Flutter podem ser divididos em dois tipos principais: Stateful e Stateless.
+StatelessWidget é imutável e não pode ser alterado após a criação, enquanto StatefulWidget pode ser alterado durante a execução do aplicativo.
+
+Exemplo básico de um aplicativo Flutter:
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Meu Primeiro App Flutter'),
+        ),
+        body: Center(
+          child: Text('Olá, Flutter!'),
+        ),
+      ),
+    );
+  }
+}

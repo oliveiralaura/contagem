@@ -1,0 +1,92 @@
+insert  into  dias_semana values (null, "Segunda-feira");
+insert  into  dias_semana values (null, "Terca-feira");
+insert  into  dias_semana values (null, "Quarta-feira");
+insert  into  dias_semana values (null, "Quinta-feira");
+insert  into  dias_semana values (null, "Sexta-feira"); 
+
+
+ 
+insert into almocos values (null, "arroz e feijao", "frango ao molho", "couve roxa",
+"gelatina","farofa de ovo");
+ 
+insert into almocos values (null, "arroz e feijao", "strogonoff de frango", "alface com morango",
+"gelatina","batata palha"); 
+ 
+insert into cafes1 values (null, "suco de abacaxi", "pão de queijo", "maçã");
+insert into cafes1 values (null, "suco de morango" "pão de batata com calabresa", "goiaba"); 
+ 
+ 
+insert into cafes2 values (null, "leite napolitano", "pão doce", "manga");
+insert into cafes2 values (null, "leite napolitano", "pão doce", "manga");
+ 
+insert into cardapios values (null, 1, 1, 2, 1, 1);
+insert into cardapios values (null, 1, 2, 2, 1, 1);
+insert into cardapios values (null, 1, 3, 2, 1, 1);
+insert into cardapios values (null, 1, 4, 2, 1, 1);
+insert into cardapios values (null, 1, 5, 2, 2, 2);
+
+
+
+
+CREATE TABLE IF NOT EXISTS `cardapio`.`almocos` (
+  `almocos_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `almocos_acompanhamento` VARCHAR(90) NOT NULL,
+  `almocos_principal` VARCHAR(90) NOT NULL,
+  `almocos_sobremesa` VARCHAR(45) NULL DEFAULT NULL,
+  `almocos_guanicao` VARCHAR(45) NULL DEFAULT NULL,
+  `almocos_salada` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`almocos_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+
+CREATE TABLE IF NOT EXISTS `cardapio`.`cafes2` (
+  `cafes2_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `cafes2_bebida` VARCHAR(45) NOT NULL,
+  `cafes2_comida` VARCHAR(45) NOT NULL,
+  `cafes2_acompanhamento` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`cafes2_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `cardapio`.`dias_semana` (
+  `dias_semana_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `dias_semana_nome` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`dias_semana_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `cardapio`.`cardapios` (
+  `cardapios_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `cafes2_cafes2_id` INT(11) NOT NULL,
+  `almocos_almocos_id` INT(11) NOT NULL,
+  `cafes1_cafes1_id` INT(11) NOT NULL,
+  `dias_semana_dias_semana_id` INT(11) NOT NULL,
+  PRIMARY KEY (`cardapios_id`),
+  INDEX `fk_cardapios_cafes2_idx` (`cafes2_cafes2_id` ASC) VISIBLE,
+  INDEX `fk_cardapios_almocos1_idx` (`almocos_almocos_id` ASC) VISIBLE,
+  INDEX `fk_cardapios_cafes11_idx` (`cafes1_cafes1_id` ASC) VISIBLE,
+  INDEX `fk_cardapios_dias_semana1_idx` (`dias_semana_dias_semana_id` ASC) VISIBLE,
+  CONSTRAINT `fk_cardapios_almocos1`
+    FOREIGN KEY (`almocos_almocos_id`)
+    REFERENCES `cardapio`.`almocos` (`almocos_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cardapios_cafes11`
+    FOREIGN KEY (`cafes1_cafes1_id`)
+    REFERENCES `cardapio`.`cafes1` (`cafes1_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cardapios_cafes2`
+    FOREIGN KEY (`cafes2_cafes2_id`)
+    REFERENCES `cardapio`.`cafes2` (`cafes2_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cardapios_dias_semana1`
+    FOREIGN KEY (`dias_semana_dias_semana_id`)
+    REFERENCES `cardapio`.`dias_semana` (`dias_semana_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;

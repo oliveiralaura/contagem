@@ -1,0 +1,1 @@
+Aprendemos a fazer um jogo de adivinhação e também nos foi mostrado um pouco de phyton, ja na parte da tarde continuamos o projeto do  mvc, que foi começado ano passado. Isso envolve a session, ou seja, terminar ela. 

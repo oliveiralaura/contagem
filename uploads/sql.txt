@@ -1,0 +1,16 @@
+1 - CREATE VIEW relatoriaTres AS
+SELECT livros.titulo_livro AS tituloLivro, autores.nome_autor
+FROM `livros` INNER JOIN autores ON
+livros.autores_id_autor = autores.id_autor;
+
+2 - CREATE VIEW relatoriaUm AS
+
+SELECT emprestimos.id_emprestimo AS numeroEmprestimo, usuarios.nome_usuario AS nomeUsuario, livros.titulo_livro as tituloNome
+FROM `emprestimos` INNER JOIN usuarios ON
+emprestimos.usuarios_id_usuario = usuarios.id_usuario JOIN livros ON emprestimos.livros_id_livro = livros.id_livro;
+
+3 - CREATE VIEW relatoriaDois AS
+
+SELECT livros.titulo_livro AS tituloLivro, autores.nome_autor AS nomeAutor, categorias.nome_categoria as categoriasNome
+FROM `livros` INNER JOIN autores ON
+livros.autores_id_autor = autores.id_autor JOIN categorias ON livros.categorias_id_categoria = categorias.id_categoria;

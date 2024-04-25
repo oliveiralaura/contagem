@@ -1,0 +1,187 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+#body-login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(212, 209, 209);
+}
+#body-home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(212, 209, 209);
+}
+#main-login{
+    width: 70%;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+#div-login{
+    background-color: rgb(212, 209, 209);
+    width: 30%;
+    height: 350px;
+    border-radius: 0px 5px 10px 5px;
+}
+#div-login1{
+    width: 70%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.primeiro{
+    width: 40%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.segundo{
+    box-shadow: 3px 2px 2px 1px rgb(165, 165, 165);
+    width: 30%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.form-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    
+}
+ #inputPassword6, #cadastro-login, #matricula-login, #senha-login{
+    width: 255px; margin: 5px;
+}
+#senha-cadastro, #nomeCompleto, #matricula{
+    width: 550px;
+}
+h3{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+#nav-home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #45a458;
+
+}
+footer{
+    width: 100%;
+    height: 40px;
+    background-color: #45a458;
+}
+.img-home{
+    height: 40px;
+    margin: 5px;
+}
+#main-home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+#div-form{
+    /* border: 0.5px solid rgb(139, 138, 138); */
+    box-shadow: 3px 2px 2px 1px rgb(165, 165, 165);
+    border-radius: 0px 5px 10px 5px;
+    margin: 15px;
+    width: 70%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#div-home{
+    margin: 5px;
+}
+#form-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px; 
+}
+#enviar-home, #turma,#data,#numero{
+    width: 380px; 
+    margin: 5px;
+}
+@media (max-width: 768px) {
+    #main-login {
+        width: 90%; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #div-login,
+    #div-login1,
+    .primeiro,
+    .segundo,
+    .form-login,
+    h3 {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    #div.col-auto,
+    #inputPassword6,
+    #cadastro-login,
+    #matricula-login,
+    #senha-login,
+    #senha-cadastro,
+    #nomeCompleto,
+    #matricula,
+    #enviar-home,
+    #turma,
+    #data,
+    #numero {
+        width: 100%!important; 
+        margin: 5px 0;
+       
+    }
+
+    .img-home {
+        height: 30px;
+        margin: 3px; 
+    }
+    #login-login {
+        display: block; 
+    }
+    
+}
+@media (min-width: 769px) {
+    #login-login {
+        display: none; 
+    }
+}
+#login-button {
+    width: 300px;
+}
+
+

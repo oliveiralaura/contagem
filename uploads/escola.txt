@@ -1,0 +1,7 @@
+CREATE view relatorioUm as
+
+SELECT horariosaulas.dia_semana_aula as diaAula, disciplinas.nome_disciplina as disciplina, professores.nome_professor as professor FROM `horariosaulas` INNER JOIN disciplinas ON horariosaulas.disciplinas_id_disciplina = disciplinas.id_disciplina JOIN professores ON horariosaulas.professores_id_professor = professores.id_professor;
+
+CREATE view relatoriodois as
+
+SELECT alunos.nome_aluno as nomeAluno, disciplinas.nome_disciplina as disciplina, notas.nota as nota FROM `notas` INNER JOIN alunos ON notas.alunos_id_aluno = alunos.id_aluno JOIN disciplinas ON notas.disciplinas_id_disciplina = disciplinas.id_disciplina;
